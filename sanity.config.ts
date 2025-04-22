@@ -27,4 +27,12 @@ export default defineConfig({
     visionTool({defaultApiVersion: apiVersion}),
     markdownSchema()
   ],
+  vite: {
+    optimizeDeps: {
+      exclude: ['lucide-react'] // Or any other CJS module
+    },
+    ssr: {
+      noExternal: ['lucide-react'] // Avoid SSR crashes
+    }
+  }
 })
