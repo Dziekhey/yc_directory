@@ -1,0 +1,9 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {}  // ⛔️ Don't inherit @/* aliases from root
+    },
+    "include": ["**/*.ts", "**/*.tsx"]
+  }
+  
